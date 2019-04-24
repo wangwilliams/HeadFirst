@@ -1,6 +1,8 @@
 package InteratorAndCombination;
 
-public class DinerMenu{
+import java.util.Iterator;
+
+public class DinerMenu extends Menu{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
@@ -22,7 +24,6 @@ public class DinerMenu{
                 false,3.05);
         //继续加入其他项目
     }
-
     public void addItem(String name,String description,boolean vegetarian,double price){
         MenuItem menuItem = new MenuItem(name,description,vegetarian,price);
        if (numberOfItems >= MAX_ITEMS){
@@ -36,7 +37,9 @@ public class DinerMenu{
     public MenuItem[] getMenuItems() {
         return menuItems;
     }
-    public Interator createIterator(){
+
+
+    public Iterator createIterator(){
         return new DinerMenuIterator(menuItems);
     }
 }

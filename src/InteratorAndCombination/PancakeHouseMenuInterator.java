@@ -1,8 +1,8 @@
 package InteratorAndCombination;
 
 import java.util.ArrayList;
-
-public class PancakeHouseMenuInterator implements Interator{
+import java.util.Iterator;
+public class PancakeHouseMenuInterator implements Iterator{
     ArrayList list;
     int position = 0;
     public PancakeHouseMenuInterator(ArrayList list){
@@ -22,5 +22,10 @@ public class PancakeHouseMenuInterator implements Interator{
         Object menuItem = list.get(position);
         position++;
         return menuItem;
+    }
+
+    @Override
+    public void remove() {
+
     }
 }

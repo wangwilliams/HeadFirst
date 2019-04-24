@@ -1,8 +1,9 @@
 package InteratorAndCombination;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu extends Menu{
     ArrayList menuItems;
 
     public PancakeHouseMenu(){
@@ -30,7 +31,7 @@ public class PancakeHouseMenu {
         return menuItems;
     }*/
 
-    public Interator createInterator(){
-        return new PancakeHouseMenuInterator(menuItems);
+    public Iterator createIterator(){
+        return menuItems.iterator();
     }
 }
