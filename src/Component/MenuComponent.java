@@ -2,6 +2,8 @@ package Component;
 
 import InteratorAndCombination.Menu;
 
+import java.util.Iterator;
+
 /**
  * 所有组件都必须实现MenuCmponent接口
  * 但是叶几点和组合节点的角色不同,所以有些方法
@@ -40,6 +42,9 @@ public abstract class MenuComponent {
     }
 
     public void print(){
+        throw new UnsupportedOperationException();
+    }
+    public Iterator createIterator(){
         throw new UnsupportedOperationException();
     }
 }

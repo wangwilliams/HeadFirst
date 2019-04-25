@@ -38,6 +38,10 @@ public class Menu extends MenuComponent{
         return description;
     }
 
+    public Iterator createIterator(){
+        return new CompositeIterator(menucomponents.iterator());
+    }
+
     @Override
     public void print() {
         System.out.print("\n"+getName());
